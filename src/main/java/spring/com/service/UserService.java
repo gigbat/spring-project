@@ -1,7 +1,7 @@
 package spring.com.service;
 
-import spring.com.model.User;
 import java.util.List;
+import spring.com.model.User;
 
 public interface UserService {
     void add(User user);
