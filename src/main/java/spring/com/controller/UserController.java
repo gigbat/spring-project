@@ -33,11 +33,16 @@ public class UserController {
         throw new RuntimeException("User " + user + " isn't exist");
     }
 
-    @GetMapping(value = "/create")
-    public void addUser(@RequestParam String name, @RequestParam String surname,
-                        @RequestParam String email) {
-        User user = new User(name, surname, email);
+    @GetMapping(value = "/inject")
+    public void addUser() {
+        User user = new User("Bob", "Blob", "bbob@gmail.com");
+        User user1 = new User("Alice", "Eila", "ealice@gmail.com");
+        User user2 = new User("John", "Jhonatan", "jhonat@gmail.com");
+        User user3 = new User("Mark", "Phyrs", "pmark@gmail.com");
         userService.add(user);
+        userService.add(user1);
+        userService.add(user2);
+        userService.add(user3);
     }
 
     @GetMapping
