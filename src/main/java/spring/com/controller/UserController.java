@@ -34,7 +34,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/inject")
-    public void addUser() {
+    public String addUser() {
         User user = new User("Bob", "Blob", "bbob@gmail.com");
         User user1 = new User("Alice", "Eila", "ealice@gmail.com");
         User user2 = new User("John", "Jhonatan", "jhonat@gmail.com");
@@ -43,6 +43,7 @@ public class UserController {
         userService.add(user1);
         userService.add(user2);
         userService.add(user3);
+        return "Inject successful";
     }
 
     @GetMapping
