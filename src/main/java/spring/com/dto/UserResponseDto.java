@@ -1,6 +1,7 @@
 package spring.com.dto;
 
 public class UserResponseDto {
+    private Long id;
     private String name;
     private String surname;
     private String email;
@@ -27,5 +28,13 @@ public class UserResponseDto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
